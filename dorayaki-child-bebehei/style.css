@@ -1,0 +1,47 @@
+/*   
+Theme Name: Dorayaki with dockable menubar
+Theme URI: github.com/bebehei/dorayaki-childtheme
+Description: Childtheme adds a dockable menubar to the dorayaki-theme
+Author: Benedikt Heine
+Author URI: http://bebehei.de
+Template: dorayaki
+Version: 1.0
+Tags: Dorayaki Child Theme
+*/
+@import url('../dorayaki/style.css');
+
+@media screen and (min-width: 1260px) {
+	#site-nav.scrolled,
+	#site-nav.wp-admin-scroll {
+		position:fixed;
+		width: 100%;
+	}
+	#site-nav.scrolled {
+		top:0;
+	}
+	#site-nav.wp-admin-scroll {
+		top:28px;
+	}
+	#site-nav.scrolled ul,
+	#site-nav.wp-admin-scroll ul{
+		border-top: none;
+	}
+
+}
+
+#mobile-nav.scrolled,
+#mobile-nav.wp-admin-scroll {
+	position:fixed;
+	width: 100%;
+}
+#mobile-nav.scrolled {
+	top:0;
+}
+#mobile-nav.wp-admin-scroll {
+	top:28px;
+}
+#mobile-nav {
+	z-index: 1000000; /* z-index because of the slider!*/
+	background-color: #ffc71c;
+}
+
