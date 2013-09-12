@@ -50,7 +50,6 @@
 
 		<div class="mobile-nav-container">
 			<a href="" id="desktop-search-btn"><span><?php _e('Search', 'dorayaki') ?></span></a>
-			<div id="mobile-nav">
 			<div id="search-wrap">
 				<?php get_search_form(); ?>
 			</div>
@@ -62,9 +61,9 @@
 			<?php endif; ?>
 			
 			</div><!-- end #mobile-nav-container -->
-
-			<a href="#nav-mobile" id="mobile-search-btn" class="search-icon"><span><?php _e('Search', 'dorayaki') ?></span></a>
-			<a href="#nav-mobile" id="mobile-menu-btn" class="menu-icon"><span><?php _e('Menu', 'dorayaki') ?></span></a>
+			<div id="mobile-nav">
+				<a href="#nav-mobile" id="mobile-search-btn" class="search-icon"><span><?php _e('Search', 'dorayaki') ?></span></a>
+				<a href="#nav-mobile" id="mobile-menu-btn" class="menu-icon"><span><?php _e('Menu', 'dorayaki') ?></span></a>
 			</div>
 			<nav id="site-nav">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -102,7 +101,7 @@
 			$options = get_option('dorayaki_theme_options');
 			if( $options['use-slider'] ) : ?>
 			<?php if(is_front_page() ) { ?>
-				<div class="header-slider" id="header-slide">
+				<div id="header-slide" class="header-slider">
 				<?php echo do_shortcode( '[responsive_slider]' ); ?>
 				</div><!-- end .header-slider -->
 			<?php } ?>
