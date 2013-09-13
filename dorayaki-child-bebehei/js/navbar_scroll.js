@@ -1,15 +1,13 @@
 /*
  * General Explanation:
  * To create a dockbar, you always have to use 2 elements. One, class-toggling
- * Element folge: 
-
 */
 var dockbarWanted = true;
 if(dockbarWanted){
 	var scrolledBeforeMenu = 0;
 	var navi, folge, height, marginAfter, browserHeight, browserWidth, distToTop, classes;
 
-	function load_values(sizeChanged){
+	function dockbarLoadValues(sizeChanged){
 		classes = 'scrolled';
 		regex = 'px';
 
@@ -48,9 +46,9 @@ if(dockbarWanted){
 		return true;
 	}
 
-	function checkScroll(){
+	function dockbarCheckScroll(){
 			if((browserWidth != window.innerWidth) || (browserHeight != window.innerHeight)){
-				load_values(true);
+				dockbarLoadValues(true);
 			}
 			if(window.pageYOffset > distToTop){
 				navi.addClass(classes);
@@ -64,13 +62,13 @@ if(dockbarWanted){
 	}
 
 	jQuery(window).load(function() {
-		load_values(false);
+		dockbarLoadValues(false);
 
 		jQuery(window).scroll(function(){
-			checkScroll();
+			dockbarCheckScroll();
 		});
 		jQuery(window).resize(function(){
-			checkScroll();
+			dockbarCheckScroll();
 		});
 
 		jQuery(document).ready(function(){
