@@ -1,24 +1,17 @@
 /*   
-Theme Name: Childtheme Dorayaki
+Theme Name: Dorayaki Dockbar
 Theme URI: http://github.com/bebehei/dorayaki-childtheme
 Description: Adds a dockable menubar to the dorayaki-childtheme
 Author: Benedikt Heine
 Author URI: http://bebehei.de
 Template: dorayaki
 Version: 1.0
-Tags: Dorayaki Child Theme
+Tags: Dorayaki Child Theme, responsive, dockbar
 */
 
 /* Use @import, to borrow the style sheet from the Waipoua parent theme */
 @import url('../dorayaki/style.css');
 /* Now you can start adding your own styles here. Use !important to overwrite styles if neccessary. */
-
-body {
-	hypens: manual;
-	-moz-hyphens: manual;
-	-webkit-hyphens: manual;
-	-ms-hyphens: manual;
-}
 
 @media screen and (min-width: 1260px) {
 	#site-nav.scrolled,
@@ -50,7 +43,7 @@ body {
 	top:28px;
 }
 #mobile-nav {
-	z-index: 1000000; /* z-index wegen dem slider!*/
+	z-index: 1000000; /* z-index to display the nav over the slider!*/
 	background-color: #ffc71c;
 	width:100%;
 }
