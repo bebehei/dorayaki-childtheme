@@ -19,7 +19,7 @@ if(dockbarWanted){
 			 classes from the navi and folge elements */
 		if(sizeChanged == true){
 			navi.removeClass(classes);
-			folge.css('margin-top:', marginAfter + 'px');
+			folge.css('margin-top', marginAfter + 'px');
 		}
 		/* select elements, depending on size and displayed header-slide*/
 		navi = jQuery('#mobile-nav');
